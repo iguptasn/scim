@@ -7,6 +7,7 @@ services:
     volumes:
       - /home/igupta/computeenv/scim/workdir:/workdir
       - /mnt/d/projects/scim/data:/data
+      - /mnt/d/projects/scim/dependencies:/dependencies
     deploy:
       resources:
         reservations:

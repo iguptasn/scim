@@ -4,6 +4,8 @@ WORKDIR /data
 
 WORKDIR /workdir
 
+WORKDIR /dependencies
+
 WORKDIR /
 RUN conda install jupyterlab pandas numpy scipy scikit-learn scikit-image holoviews matplotlib
 EXPOSE 8888
