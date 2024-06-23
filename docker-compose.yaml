@@ -1,0 +1,16 @@
+version: '0.1'
+services:
+  scim:
+    build: .
+    ports: 
+      - 8888:8888
+    volumes:
+      - /home/igupta/computeenv/scim/workdir:/workdir
+      - /mnt/d/projects/scim/data:/data
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
